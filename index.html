@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HBD Adit 🎂</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top, #1e293b 0%, #0f172a 40%, #020617 100%);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 650px;
+      text-align: center;
+      padding: 35px 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(34, 211, 238, 0.12);
+      border: 1px solid #22d3ee;
+      color: #67e8f9;
+      padding: 8px 15px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin-bottom: 25px;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 12vw, 90px);
+      font-weight: 900;
+      line-height: 0.9;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #22d3ee, #818cf8, #f472b6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 2s infinite alternate;
+    }
+
+    .name {
+      font-size: clamp(28px, 7vw, 55px);
+      font-weight: 800;
+      margin-top: 15px;
+    }
+
+    .subtitle {
+      color: #94a3b8;
+      margin: 20px auto;
+      max-width: 500px;
+      line-height: 1.6;
+    }
+
+    .card {
+      margin-top: 30px;
+      padding: 28px;
+      border-radius: 25px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+    }
+
+    .emoji {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .message {
+      color: #cbd5e1;
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    .message strong {
+      color: #22d3ee;
+    }
+
+    button {
+      margin-top: 25px;
+      padding: 14px 25px;
+      border: none;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #06b6d4, #6366f1);
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+      box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+    }
+
+    button:hover {
+      transform: translateY(-3px) scale(1.03);
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+
+    #surprise {
+      display: none;
+      margin-top: 25px;
+      padding: 20px;
+      border-radius: 18px;
+      background: rgba(34, 211, 238, 0.08);
+      border: 1px dashed #22d3ee;
+      color: #e2e8f0;
+      line-height: 1.7;
+      animation: muncul 0.5s ease;
+    }
+
+    .footer {
+      margin-top: 30px;
+      color: #475569;
+      font-size: 12px;
+    }
+
+    @keyframes glow {
+      from {
+        filter: drop-shadow(0 0 5px rgba(34, 211, 238, 0.2));
+      }
+      to {
+        filter: drop-shadow(0 0 20px rgba(129, 140, 248, 0.6));
+      }
+    }
+
+    @keyframes muncul {
+      from {
+        opacity: 0;
+        transform: translateY(15px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .confetti {
+      position: fixed;
+      width: 9px;
+      height: 14px;
+      top: -20px;
+      z-index: 999;
+      animation: jatuh linear forwards;
+    }
+
+    @keyframes jatuh {
+      to {
+        transform: translateY(110vh) rotate(720deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="badge">⚡ SPECIAL DAY DETECTED</div>
+
+    <h1>HBD</h1>
+    <div class="name">ADIT 🎂</div>
+
+    <p class="subtitle">
+      Selamat ulang tahun, Dit. Umur nambah, tapi kelakuan...
+      ya semoga ikut nambah dewasa lah dikit. 😂
+    </p>
+
+    <div class="card">
+
+      <div class="emoji">🗿</div>
+
+      <div class="message">
+        Selamat ulang tahun, <strong>Adit!</strong> 🎉
+        <br><br>
+
+        Semoga panjang umur, sehat selalu,
+        rezekinya lancar, urusannya dimudahkan,
+        dan apa yang lu pengen bisa tercapai.
+        <br><br>
+
+        Semoga tahun ini makin sukses,
+        makin keren, dan yang paling penting...
+        <strong>jangan makin aneh.</strong> 💀
+        <br><br>
+
+        Pokoknya enjoy your day, bro.
+        Hari ini lu boleh merasa spesial.
+        Besok balik normal lagi.
+      </div>
+
+      <button onclick="surprise()">
+        🎁 BUKA KEJUTAN
+      </button>
+
+      <div id="surprise">
+        🎉 <strong>SELAMAT!</strong> 🎉
+        <br><br>
+        Lu baru saja mendapatkan hadiah berupa...
+        <br>
+        <strong>ucapan ulang tahun gratis.</strong>
+        <br><br>
+        Jangan berharap transferan. 💀💸
+        <br><br>
+        — Dari temen lu yang masih mau berteman sama lu 🤝
+      </div>
+
+    </div>
+
+    <div class="footer">
+      Made with 🤝 & sedikit niat
+    </div>
+
+  </div>
+
+  <script>
+    function surprise() {
+      const box = document.getElementById("surprise");
+
+      box.style.display = "block";
+
+      // Confetti
+      for (let i = 0; i < 100; i++) {
+        const confetti = document.createElement("div");
+
+        confetti.classList.add("confetti");
+
+        const colors = [
+          "#22d3ee",
+          "#818cf8",
+          "#f472b6",
+          "#facc15",
+          "#4ade80"
+        ];
+
+        confetti.style.background =
+          colors[Math.floor(Math.random() * colors.length)];
+
+        confetti.style.left = Math.random() * 100 + "vw";
+
+        confetti.style.animationDuration =
+          (Math.random() * 2 + 2) + "s";
+
+        confetti.style.animationDelay =
+          Math.random() * 0.5 + "s";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+          confetti.remove();
+        }, 4500);
+      }
+    }
+  </script>
+
+</body>
+</html>
